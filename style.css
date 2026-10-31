@@ -1,0 +1,431 @@
+  /* ===== Colors (sirf 3 main colors) ===== */
+  :root {
+      --navy: #081b33;
+      --accent: #2563eb;
+      --bg: #e4e9f1;
+      --white: #ffffff;
+      --text: #1e293b;
+      --muted: #414e61;
+      --border: #e5e7eb;
+      --font: "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+  a {
+      color: var(--accent);
+  }
+
+  .hidden {
+      display: none !important;
+  }
+
+  /* ===== Header ===== */
+  header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 18px 24px;
+  }
+
+  .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+
+  .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      font-weight: 700;
+  }
+
+  .search-form {
+      display: flex;
+      flex: 1;
+      max-width: 480px;
+      min-width: 260px;
+  }
+
+  .search-form input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px 14px;
+      border: 1px solid #1e3a5f;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      background: #13294a;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 15px;
+      outline: none;
+  }
+
+  .search-form input::placeholder {
+      color: #8ca0bb;
+  }
+
+  .search-form input:focus {
+      border-color: var(--accent);
+  }
+
+  .search-form button {
+      padding: 11px 20px;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 0 8px 8px 0;
+      font-family: var(--font);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+  }
+
+  .search-form button:hover {
+      background: #1d4ed8;
+  }
+
+  /* ===== Main ===== */
+  main {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      flex: 1;
+  }
+
+  .intro {
+      text-align: center;
+      padding: 60px 20px;
+  }
+
+  .intro h1 {
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 8px;
+  }
+
+  .intro p {
+      color: var(--muted);
+  }
+
+  .status {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 500;
+  }
+
+  .status.info {
+      background: #e0ecff;
+      color: #1e40af;
+  }
+
+  .status.error {
+      background: #fde8e8;
+      color: #9b1c1c;
+  }
+
+  /* ===== Profile ===== */
+  .profile {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+  }
+
+  .profile img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+  }
+
+  .profile-info {
+      flex: 1;
+      min-width: 220px;
+  }
+
+  .profile-info h2 {
+      font-size: 22px;
+      color: var(--navy);
+      font-weight: 700;
+  }
+
+  .profile-info .login {
+      font-size: 15px;
+      text-decoration: none;
+  }
+
+  .profile-info .login:hover {
+      text-decoration: underline;
+  }
+
+  .profile-info .bio {
+      margin: 6px 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+  }
+
+  .profile-info .meta {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+  }
+
+  /* ===== Stats ===== */
+  .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+  }
+
+  .stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+  }
+
+  .stat-card .number {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
+  }
+
+  .stat-card .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 2px;
+  }
+
+  /* ===== Controls ===== */
+  .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+  }
+
+  .controls input,
+  .controls select {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font);
+      font-size: 14px;
+      background: var(--white);
+      color: var(--text);
+      outline: none;
+  }
+
+  .controls input:focus,
+  .controls select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .controls input {
+      flex: 1;
+      min-width: 220px;
+  }
+
+  /* ===== Repo Cards ===== */
+  .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+  }
+
+  .repo-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .repo-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 6px 18px rgba(11, 31, 58, 0.08);
+  }
+
+  .repo-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      word-break: break-all;
+  }
+
+  .repo-card h3 a {
+      color: var(--accent);
+      text-decoration: none;
+  }
+
+  .repo-card h3 a:hover {
+      text-decoration: underline;
+  }
+
+  .repo-card .desc {
+      color: var(--muted);
+      font-size: 14px;
+      flex: 1;
+  }
+
+  .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+  }
+
+  .badge {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 2px 9px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+  }
+
+  .lang-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+  }
+
+  .badge.fork {
+      background: #e0ecff;
+      color: #1e40af;
+      border-color: #c7dbfd;
+  }
+
+  .badge.archived {
+      background: #fdf3dc;
+      color: #8a5a00;
+      border-color: #f5e0a8;
+  }
+
+  .badge.topic {
+      color: var(--accent);
+      background: #f0f6ff;
+      border-color: #dbe7fb;
+  }
+
+  .repo-stats {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+  }
+
+  .repo-stats strong {
+      color: var(--text);
+      font-weight: 600;
+  }
+
+  .repo-dates {
+      font-size: 12px;
+      color: var(--muted);
+  }
+
+  /* ===== Footer (basic) ===== */
+  footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 18px 24px;
+      font-size: 15px;
+      color: var(--white);
+  }
+
+  .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  footer a {
+      color: var(--bg);
+      text-decoration: none;
+  }
+
+  footer a:hover {
+      text-decoration: underline;
+  }
+
+  .contact span+span::before {
+      content: "•";
+      margin: 0 10px;
+      color: var(--border);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 640px) {
+      .search-form {
+          max-width: 100%;
+      }
+
+      .intro h1 {
+          font-size: 22px;
+      }
+
+      .footer-inner {
+          flex-direction: column;
+          text-align: center;
+      }
+  }

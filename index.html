@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repo Hub | GitHub Repository Explorer | By Nasr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark">RH</span>
+        <span>Repo Hub</span>
+      </div>
+      <form class="search-form" id="searchForm">
+        <input type="text" id="usernameInput" placeholder="GitHub username (e.g. shayanulhaq16)" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Shuru mein dikhne wala message -->
+    <div id="intro" class="intro">
+      <h1>GitHub Repositories Explorer</h1>
+      <p>Type a GitHub username to see their public repositories.</p>
+    </div>
+
+    <div id="status" class="status hidden"></div>
+
+    <div id="profile"></div>
+    <div id="stats" class="stats"></div>
+
+    <div id="controls" class="controls hidden">
+      <input type="text" id="repoSearch" placeholder="Search by repo name or description">
+      <select id="langFilter">
+        <option value="">All languages</option>
+      </select>
+      <select id="sortSelect">
+        <option value="updated">Recently updated</option>
+        <option value="created">Recently created</option>
+        <option value="stars">Most stars</option>
+        <option value="forks">Most forks</option>
+        <option value="name">Name (A-Z)</option>
+      </select>
+    </div>
+
+    <div id="repos" class="repo-grid"></div>
+
+  </main>
+
+  <footer>
+  <div class="footer-inner">
+    <span>© 2026 Repo Hub. All rights reserved.</span>
+    <div class="contact">
+      <span><a href="https://mail.google.com/mail/?view=cm&to=shayanulhaq5555@gmail.com" target="_blank" rel="noopener">Contact me</a></span>
+      <span><a href="https://github.com/shayanulhaq16" target="_blank" rel="noopener">GitHub (me)</a></span>
+    </div>
+  </div>
+</footer>
+  <script src="app.js"></script>
+
+
+
+</body>
+</html>
